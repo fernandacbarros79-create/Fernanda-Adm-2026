@@ -1,0 +1,5 @@
+{
+  "name": "Adm SAMU PVH",
+  "description": "Aplicativo para controle e cálculo de plantões extras (rurais e urbanos) para servidores do SAMU Porto Velho.",
+  "requestFramePermissions": []
+}
