@@ -9,18 +9,22 @@ export enum ProfessionalCategory {
 export interface User {
   id: number;
   name: string;
-  registration_number: string;
-  professional_category: ProfessionalCategory;
+  username?: string;
+  email?: string;
+  registration_number?: string;
+  professional_category?: ProfessionalCategory;
   hourly_rate: number;
   must_change_password: number;
   is_admin: number;
+  role_user?: 'ADM' | 'USER';
+  lotacao_fisica: string;
 }
 
 export interface Extra {
   id: number;
   user_id: number;
   date: string;
-  type: 'rural' | 'urban';
+  type: 'rural' | 'urban' | 'other';
   hours: number;
   observations: string;
   start_time: string;
