@@ -121,7 +121,7 @@ app.post('/api/admin/users', async (req, res) => {
           username,
           email,
           registration_number: registration_number || null,
-          password: password || 'SAMU192',
+          password: password || 'samu192',
           professional_category: professional_category || null,
           hourly_rate: hourly_rate || 0,
           is_admin: is_admin ? 1 : 0,

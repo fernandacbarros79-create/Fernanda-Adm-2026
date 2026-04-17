@@ -31,5 +31,5 @@ CREATE TABLE IF NOT EXISTS extras (
 -- Inserir dados iniciais
 INSERT INTO users (name, registration_number, password, professional_category, hourly_rate, is_admin, role_user, lotacao_fisica, must_change_password)
 VALUES 
-  ('Administrador Principal', 'ADMIN', '123456', 'Administrativo', 0, 1, 'ADM', 'samu pvh', 1)
-ON CONFLICT (registration_number) DO UPDATE SET password = '123456', must_change_password = 1;
+  ('Administrador Principal', 'adm', 'admin', 'Administrativo', 0, 1, 'ADM', 'samu pvh', 1)
+ON CONFLICT (registration_number) DO UPDATE SET password = 'admin', must_change_password = 1;

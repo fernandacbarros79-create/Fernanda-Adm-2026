@@ -331,7 +331,7 @@ const LoginPage = ({ onLogin }: { onLogin: (user: User) => void }) => {
 const ChangePasswordPage = ({ user, onPasswordChanged }: { user: User, onPasswordChanged: (updatedUser: User) => void }) => {
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [registration, setRegistration] = useState(user.registration_number || '');
+  const [registration, setRegistration] = useState((user.registration_number === 'adm' || user.registration_number === 'ADMIN') ? '' : (user.registration_number || ''));
   const [category, setCategory] = useState<ProfessionalCategory>(user.professional_category || ProfessionalCategory.NURSE);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
